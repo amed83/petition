@@ -1,0 +1,36 @@
+{
+  "name": "petition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spicedacademy/petition.git"
+  },
+  "engines": {
+    "node": "6.11.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spicedacademy/petition/issues"
+  },
+  "homepage": "https://github.com/spicedacademy/petition#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.2",
+    "connect-redis": "^3.1.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.2",
+    "csurf": "^1.9.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "pg": "^7.3.0",
+    "redis": "^2.8.0",
+    "spiced-pg": "spicedacademy/spiced-pg"
+  }
+}

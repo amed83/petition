@@ -1,0 +1,33 @@
+
+<div class="register-container">
+        <h1 class="title">Stand up against equality!!!!!</h1>
+        <div id="text-container">
+            <h3>Half of the world's wealth is now in the hands of 1% of the population.<br>We strongly believe that this is unfair.<br>Sign the petition to give the 1% the other half as well.</h3>
+        </div>
+
+        <img id = "king" src="/public/images/theKing.jpg">
+        <form action="/register" method="POST">
+            <div id="registerInput-container">
+                <input name="firstname" placeholder="First name">
+                <input name="lastname"placeholder="Second name">
+                <input name="email"placeholder="Email Address">
+                <input type="password" name="password"placeholder="Password">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            </div>
+            <button id="signupButton" type="submit">Sign Up</button>
+        </form>
+        <h3>If you are already a member, please <button type = "click" id= "loginNewButton">Login</button></h3>
+
+        <h1 id="register-error">{{error}}</h1>
+
+        <div id="modal-container" style="display:flex;" >
+            <!-- <button class="close">&times;</button> -->
+            <form id="login-container"action="/login" method="post">
+                <div id="closeLogin">&times;</div>
+                <input name="email"placeholder="Enter e-mail ">
+                <input type = "password" name="password"placeholder="Enter Password">
+                <input type= "hidden" name="_csrf" value="{{csrfToken}}">
+                <button id = "loginButton"> <i class="fa fa-sign-in"> </i> Login</button>
+            </form>
+        </div>
+    </div>

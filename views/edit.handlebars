@@ -1,0 +1,15 @@
+<h1 id ="editTitle">Edit you Profile</h1>
+<form id = "editProfile" action="/edit" method = "post">
+
+   <input type="text" name="firstname" placeholder="First name"value="{{firstname}}">
+   <input type="text" name="lastname" placeholder="Second name" value="{{lastname}}">
+   <input type="text" name="email" placeholder="E-mail" value="{{email}}">
+   <input type="password" name="password" placeholder="Passwords" value="">
+   <input type="text" name="age" placeholder="Age"value="{{age}}">
+   <input type="text" name="city" placeholder=" City" value="{{city}}">
+   <input type="text" name="homepage"placeholder="Homepage" value="{{homepage}}">
+   <input type= "hidden" name= "_csrf" value="{{csrfToken}}">
+
+   <button type="submit" id="updateButton">Update</button>
+
+</form>

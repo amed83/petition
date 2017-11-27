@@ -1,0 +1,19 @@
+<div id= "king-containerProfile">
+  <img id = "king" src="/public/images/theKing.jpg">
+  <h2>Please insert some further information about you</h2>
+</div>
+<!-- <h2>Please insert some further information about you</h2> -->
+<form action="/insertProfile" method="POST">
+
+  <div id="profile-container">
+      <label for ="Age"></label>
+      <input name="age" placeholder="Age">
+      <label for ="City"></label>
+      <input name="city"placeholder="City">
+      <label for ="Homepage"></label>
+      <input name="homepage"placeholder="Homepage">
+      <input type= "hidden" name= "_csrf" value="{{csrfToken}}">
+      <button id= "continueButton" type="submit">CONTINUE</button>
+  </div
+
+</form>

@@ -1,0 +1,27 @@
+<div id="thanks-container">
+        <h1 id="thanksPhrase">Thanks for joining us {{name}}!!!</h1>
+
+       <div id="signature-container">
+        <img src="{{theimage}}">
+    </div>
+       {{#if numberSigners}}
+            <h2><a href='/signers'> See  the {{numberSigners}} other </a> people that joined us </h2>
+       {{else}}
+            <h2>{{congrats}}</h2>
+      {{/if}}
+        {{list}}
+
+            <div id="editDeleteContainer">
+                 <a id="editLink" href="/edit"><button class="editDeleteButton"><i class ="fa fa-pencil-square-o"></i>Edit profile</button></a>
+                <form action="/deleteSignature" method= "POST">
+                    <button class ="editDeleteButton" type="submit"><i class ="fa fa-eraser"></i>Delete signature</button>
+                    <input type= "hidden" name= "_csrf" value="{{csrfToken}}">
+                </form>
+            </div>
+            <img id="trickleDown" src= "{{thanksImg}}"
+
+</div>
+<form id="logout" action="/logout" method= "POST">
+    <input type= "hidden" name= "_csrf" value="{{csrfToken}}">
+     <button id = "logoutButton"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+</form>
