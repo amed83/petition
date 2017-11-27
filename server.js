@@ -10,7 +10,7 @@ const csurf = require('csurf')
 const bcrypt = require('bcryptjs') //crypto module for password
 const db = spicedPg(process.env.DATABASE_URL || 'postgres:Amedeo:Tafano83@localhost:5432/petition');
 
-// const redis = require('./redis')
+
 
 
 //Setting handlebars
@@ -20,12 +20,12 @@ app.set('view engine', 'handlebars');
 
 //Middlewares
 
-// app.use(csurf({cookie: true}));
+
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
-// var csrfProtection = csurf({ cookie: true })
+
 app.use(csurf({
     cookie: true
 }))
@@ -33,7 +33,7 @@ app.use(cookieSession({
     secret: 'a really hard to guess secret',
     maxAge: 1000 * 60 * 60 * 24 * 14
 }));
-// var csrfProtection = csurf()
+
 app.use('/public', express.static(__dirname + '/public'));
 
 
@@ -178,7 +178,6 @@ app.get('/petition', function(req, res) {
     }
     else{
         if(req.session.user.signatureId){
-            console.log(req.session.user.signatureId)
             res.redirect('/thanks')
         }
         else{
@@ -214,27 +213,19 @@ app.get('/signers/:cityName', function(req, res) {
     const city = req.params.cityName;
     const newCity = city.replace('%20', ' ')
     const q = `SELECT users.firstname, users.lastname, user_profiles.age,user_profiles.url
-      FROM users
-      JOIN user_profiles
-      ON users.id=user_profiles.user_id
-      WHERE user_profiles.city = $1;`
+    FROM users
+    JOIN user_profiles
+    ON users.id=user_profiles.user_id
+    WHERE user_profiles.city = $1;`
     const param = [newCity]
     db.query(q, param).then(function(result) {
-        if(result.rows.length===1){
-            res.render('firstSigner',{
-                csrfToken: req.csrfToken(),
-                layout: 'main',
-                city: newCity
-            })
-        }
-        else{
             res.render('signersPerCity',{
                 csrfToken: req.csrfToken(),
                 layout: 'main',
                 list: result.rows,
                 city: newCity
             })
-        }
+
         }).catch(function(e) {
             console.log(e)
           })
@@ -398,7 +389,7 @@ app.post('/logout', function(req, res) {
     res.redirect('/register')
 });
 
-
+/*CHECK FOR PASSWORD*/
 
 function hashPassword(plainTextPassword) {
     return new Promise(function(resolve, reject) {
