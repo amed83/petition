@@ -2,7 +2,7 @@
 
 ## Summary
 The idea behind this project is to create an online petition that visitors can sign to make their voice heard on an issue of your choosing.
-"Help the richest" is a ironic petition about today wealth inequality
+"Help the richest" is a sarcastic petition about today's wealth inequality
 
 ## Tech Stack
 * Handlebars
