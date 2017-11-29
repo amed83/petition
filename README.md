@@ -21,7 +21,7 @@ The idea behind this project is to create an online petition that visitors can s
 ![Petition Register](petition_registration.jpg)
 
 ****
-
+<!-- 
 ![Petition Signature](petition_signature.png)
 
 ****
@@ -34,4 +34,4 @@ The idea behind this project is to create an online petition that visitors can s
 
 ****
 
-![Petition List](petition_list.png)
+![Petition List](petition_list.png) -->
