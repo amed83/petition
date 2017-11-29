@@ -18,7 +18,7 @@ The idea behind this project is to create an online petition that visitors can s
 * Users can edit his/her personal information(city,age,homepage) thanks to an "edit" button
 * Users can delete their signatures
 
-![Petition Register](petition_registration.jpg)
+![Petition Register](petition_registration.png)
 
 
 <!--
