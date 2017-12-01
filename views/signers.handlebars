@@ -1,7 +1,5 @@
 
 
-
-
 <div id='signers-container'>
     {{#each signers}}
         {{#if this.url}}
@@ -10,10 +8,8 @@
             <li class ="signers"> {{this.firstname}} {{this.lastname}} {{#if this.age}}( {{this.age}}{{#if this.city}}, <a href= "/signers/{{this.city}}">{{this.city}}</a>{{/if}}){{else}}{{#if this.city}}( <a href= "/signers/{{this.city}}">{{this.city}}</a>){{/if}}{{/if}}
         {{/if}}
     {{/each}}
-
-    <!-- <img src="{{stocks}}"> -->
-
 </div>
+
 <form id="logout" action="/logout" method= "POST">
     <input type= "hidden" name= "_csrf" value="{{csrfToken}}">
      <button id = "logoutButton"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>

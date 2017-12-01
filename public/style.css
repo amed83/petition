@@ -151,8 +151,6 @@ h1{
 }
 
 
-
-
 /*//////////////////////////////////////////*/
 
 /*PETITION PAGE*/
@@ -199,7 +197,7 @@ input:focus{
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    /*line-height: 200%;*/
+
 }
 
 #submitter{
@@ -344,8 +342,7 @@ input{
 #editDeleteContainer{
     width: 400px;
     height: 280px;
-    /*margin-left:400px;
-    margin-top:20px;*/
+
 }
 
 .editDeleteButton{
@@ -359,7 +356,7 @@ input{
     border-radius: 8px;
     cursor:pointer;
     text-decoration:none;
-    /*box-shadow: 5px 5px 5px #30302E;*/
+
 }
 #editLink{
     text-decoration: none;
@@ -400,7 +397,6 @@ form{
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 
